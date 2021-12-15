@@ -11,15 +11,26 @@
 </head>
 <body>
     <div id = "shopping-list">
-        <h1>{{title.toLocaleUpperCase}}</h1>
+        <div class = header>
+            <h1>{{title}}</h1>
+            <button v-on:click="items.push(newItem); newItem=''" class="btn btn-primary">Save item</button>
+        </div>
         <input v-model="newItem" type="text" name="newItem" id="newItem">
+        <ul> 
+            <li v-for="items in items">{{items}}</li>
+        </ul>
     </div>
     <script>
         const shoppingList = new Vue({
             el: "#shopping-list",
             data: {
                 title : "Shopping List",
-                newItem : 'Introduce the new itemxdg-open index.html'
+                newItem : 'Introduce the new item',
+                items : [
+                    "oranges",
+                    "apples",
+                    "chocolate"
+                ]
             }
         })
     </script>
