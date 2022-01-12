@@ -21,13 +21,12 @@ Follow these steps:
 - [ X ] Use Vue Devtools. Configure it to work with file://
 - [ X ] Add v-on: Start by simulating in the console what we are going to do
 - [ X ] Add button to add the new item when clicked
-- [ ] Add v-on:keyup.enter to the input element
-- [ ] Shorthands for v-on 
-- [ ] Use a method `saveItem` to factorice
-- [ ] Reset the input when finished the insertion
-- [ ] Check the method using the debugger
+- [ X ] Add v-on:keyup.enter to the input element
+- [ X ] Shorthands for v-on 
+- [ X ] Use a method `saveItem` to factorice
+- [ X ] Reset the input when finished the insertion
+- [ X ] Check the method using the debugger
 - [ ] v-if and v-else
-- [ ] Add states: default and edition 
 
 This repository contains the example code for the [Vue.js Fundamentals](https://vueschool.io/courses/vuejs-fundamentals) course.
 
