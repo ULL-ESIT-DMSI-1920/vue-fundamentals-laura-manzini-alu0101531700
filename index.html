@@ -13,16 +13,17 @@
     <div id = "shopping-list">
         <div class = "header">
             <h1>{{title.toLocaleUpperCase()}}</h1>
-            <button v-if="state === 'default'" @clik="changeState('edition')" class="btn btn-primary">Add new item</button>
+            <button v-if="state === 'default'" @click="changeState('edition')" class="btn btn-primary">Add new item</button>
+            <button v-else class="btn btn-cancel" @click="changeState('default')">Cancel Added Item</button>
         </div>
-        <div v-if="state === 'edition'" class="add-item-form">
-            <input v-model="newItem" v-on:keyup.enter="saveItem" type="text" name="newItem" id="newItem">
+        <div v-if="state === 'edition'" class="add-item-form"> 
+            <input v-model="newItem" @keyup.enter="saveItem" type="text" name="newItem" id="newItem">
             <button @click="saveItem"  class="btn btn-primary">Save item</button>
             <button @click="changeState('default')" class="btn btn-cancel">Cancel item</button>
         </div>
        
 
-        <p v-if="items.length == 0">Nothing to do, nothing to shop</p>
+        <p v-if="items.length === 0">Nothing to do, nothing to shop</p>
         <ul> 
             <li v-for="items in items">{{items}}</li>
         </ul>
@@ -31,7 +32,7 @@
         const shoppingList = new Vue({
             el: "#shopping-list",
             data: {
-                state: "default",
+                state: 'default',
                 title : "Shopping List",
                 newItem : '',
                 items : [
@@ -41,10 +42,10 @@
             methods:{
                 saveItem() {
                     this.items.push(this.newItem); 
-                    this.newItem=''
+                    this.newItem='';
                 },
                 changeState(newState){
-                    this.state = newState
+                    this.state = newState;
                 }
             }
         })
