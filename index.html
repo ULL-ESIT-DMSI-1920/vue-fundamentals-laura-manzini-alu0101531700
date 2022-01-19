@@ -22,7 +22,7 @@
             <button @click="changeState('default')" class="btn btn-cancel">Cancel item</button>
         </div>
         <ul>
-            <li v-for="item in reversedItems" :class="{strikeout: item.purchased}" @click="togglePurchased(item)">{{ item.label }}</li>
+            <li v-for="item in reversedItems" :class="{strikeout: item.purchased, priority: item.highPriority}" @click="togglePurchased(item)">{{ item.label }}</li>
         </ul>
         <p v-if="items.length === 0">Nothing to shop</p>
     </div>

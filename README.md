@@ -105,8 +105,8 @@ Follow these steps:
   ```
 
   to style the purchased items. See the [Vue.js Guide section on Class and Style Bindings](https://vuejs.org/v2/guide/class-and-style.html)
-  - [  ]  Use first the *object syntax* `v-bind:class="{myclass: expression}"` and 
-  - [  ]  later the *array syntax* `v-bind:class=[exp1, exp2]`
+  - [ X ]  Use first the *object syntax* `v-bind:class="{myclass: expression}"` and 
+  - [ X ]  later the *array syntax* `v-bind:class=[exp1, exp2]`
 
 
 ## Topics
