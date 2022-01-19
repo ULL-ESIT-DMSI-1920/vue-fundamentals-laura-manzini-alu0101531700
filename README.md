@@ -91,7 +91,7 @@ Follow these steps:
 ## Dynamic classes with v-bind
 
 - [ X ] Change the list of items from a list of Strings to a list of Objects with `label` and `purchased` attributes. Update the `saveItem` method and the template accordingly
-- [  ] Make use of the class `.strikeout` in the css file:
+- [ X ] Make use of the class `.strikeout` in the css file:
 
   ```css
   .strikeout {

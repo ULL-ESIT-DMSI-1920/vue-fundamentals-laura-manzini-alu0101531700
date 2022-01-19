@@ -18,11 +18,11 @@
         </div>
         <div v-if="state === 'edition'" class="add-item-form"> 
             <input v-model="newItem" @keyup.enter="saveItem" placeholder="Add an item" type="text">
-            <button @click="saveItem"  class="btn btn-primary" :disabled="newItem.length === 0">Save item</button>
+            <button @click="saveItem" class="btn btn-primary" :disabled="newItem.length === 0">Save item</button>
             <button @click="changeState('default')" class="btn btn-cancel">Cancel item</button>
         </div>
         <ul>
-            <li v-for="item in reversedItems" @click="togglePurchased(item)">{{ item.label }}</li>
+            <li v-for="item in reversedItems" :class="{strikeout: item.purchased}" @click="togglePurchased(item)">{{ item.label }}</li>
         </ul>
         <p v-if="items.length === 0">Nothing to shop</p>
         <ul> 
