@@ -81,8 +81,8 @@ Follow these steps:
 
 ## v-bind steps
 
-- [ ] Using the dev tools, check that when we click the `save item` with the `input` empty we are adding new empty strings to the `items` list
-- [ ] Disable the button `save item` when the `input` is empty by binding the `disabled` attribute of the button
+- [ X ] Using the dev tools, check that when we click the `save item` with the `input` empty we are adding new empty strings to the `items` list
+- [ X ] Disable the button `save item` when the `input` is empty by binding the `disabled` attribute of the button
 
   The `disabled` attribute is a boolean attribute. A disabled button is unusable and un-clickable.
   

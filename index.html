@@ -17,13 +17,14 @@
             <button v-else class="btn btn-cancel" @click="changeState('default')">Cancel Added Item</button>
         </div>
         <div v-if="state === 'edition'" class="add-item-form"> 
-            <input v-model="newItem" @keyup.enter="saveItem" type="text" name="newItem" id="newItem">
-            <button @click="saveItem"  class="btn btn-primary">Save item</button>
+            <input v-model="newItem" @keyup.enter="saveItem" placeholder="Add an item" type="text">
+            <button @click="saveItem"  class="btn btn-primary" :disabled="newItem.length === 0">Save item</button>
             <button @click="changeState('default')" class="btn btn-cancel">Cancel item</button>
         </div>
-       
-
-        <p v-if="items.length === 0">Nothing to do, nothing to shop</p>
+        <ul>
+            <li v-for="item in reversedItems" @click="togglePurchased(item)">{{ item.label }}</li>
+        </ul>
+        <p v-if="items.length === 0">Nothing to shop</p>
         <ul> 
             <li v-for="items in items">{{items}}</li>
         </ul>
@@ -33,10 +34,29 @@
             el: "#shopping-list",
             data: {
                 state: 'default',
-                title : "Shopping List",
+                title : "Birthday Party Shopping List",
                 newItem : '',
                 items : [
-                    "Shoes"
+                    {
+                        label: '20 party hats',
+                        purchased: false,
+                        highPriority: false,
+                    },
+                    {
+                        label: 'birthday cake',
+                        purchased: false,
+                        highPriority: true,
+                    },
+                    {
+                        label: '12 candles',
+                        purchased: true,
+                        highPriority: true,
+                    },
+                    {
+                        label: '30 cups',
+                        purchased: true,
+                        highPriority: false,
+                    },                   
                 ]
             },
             methods:{
@@ -47,11 +67,14 @@
                     });
                     this.newItem = '';
                     },
-                    changeState(newState) {
-                        this.state = newState;
-                        this.newItem = '';
-                    },
-            }
+                changeState(newState) {
+                    this.state = newState;
+                    this.newItem = '';
+                },
+                togglePurchased(item) {
+                    item.purchased = !item.purchased;
+                }
+            }       
         })
     </script>
     
