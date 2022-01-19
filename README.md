@@ -1,4 +1,8 @@
-# Vue.js Fundamentals
+# Práctica Vue.js Fundamentals
+
+Estudiante: Laura Manzini - *alu0101531700@ull.edu.es*
+
+## Introduction
 
 This repository is a template for you to follow the course [Vue.js Fundamentals](https://vueschool.io/courses/vuejs-fundamentals).
 
@@ -118,7 +122,9 @@ Follow these steps:
 - Components
 
 
+## Further details
 
+For more details on the introduction to Vue please follow this [repository](https://github.com/ULL-ESIT-DMSI-1920/vue-intro-laura-manzini-alu0101531700.git).
 
 
 

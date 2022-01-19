@@ -36,17 +36,21 @@
                 title : "Shopping List",
                 newItem : '',
                 items : [
-                    "bananas"
+                    "Shoes"
                 ]
             },
             methods:{
                 saveItem() {
-                    this.items.push(this.newItem); 
-                    this.newItem='';
-                },
-                changeState(newState){
-                    this.state = newState;
-                }
+                    this.items.push({
+                        label: this.newItem,
+                        purchased: false,
+                    });
+                    this.newItem = '';
+                    },
+                    changeState(newState) {
+                        this.state = newState;
+                        this.newItem = '';
+                    },
             }
         })
     </script>
