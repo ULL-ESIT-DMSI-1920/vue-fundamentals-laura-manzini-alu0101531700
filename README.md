@@ -17,29 +17,29 @@ See also [Annotated Reading of the Essentials Section of the Vue.js Guide](https
 
 Follow these steps:
 
-- [ X ] Write initial HTML with a shopping-list div
-- [ X ] Load and Instanciate Vue add data and Vue template syntax to interpolate
-- [ X ] Add an input an synchronize it with the interpolated text to see it
-- [ X ] Explore the app in the console
-- [ X ] Discuss the syntax of JS inside moustaches
-- [ X ] Learn to read the errors in the console
-- [ X ] Add items to data and show them using v-for
-- [ X ] Add input a variable to store the newItem
-- [ X ] Connect the input with the newItem and check the binding
-- [ X ] Use Vue Devtools. Configure it to work with file://
-- [ X ] Add v-on: Start by simulating in the console what we are going to do
-- [ X ] Add button to add the new item when clicked
-- [ X ] Add v-on:keyup.enter to the input element
-- [ X ] Shorthands for v-on 
-- [ X ] Use a method `saveItem` to factorice
-- [ X ] Reset the input when finished the insertion
-- [ X ] Check the method using the debugger
-- [ X ] v-if and v-else: add a conditional message when the list is empty
+- [x] Write initial HTML with a shopping-list div
+- [x] Load and Instanciate Vue add data and Vue template syntax to interpolate
+- [x] Add an input an synchronize it with the interpolated text to see it
+- [x] Explore the app in the console
+- [x] Discuss the syntax of JS inside moustaches
+- [x] Learn to read the errors in the console
+- [x] Add items to data and show them using v-for
+- [x] Add input a variable to store the newItem
+- [x] Connect the input with the newItem and check the binding
+- [x] Use Vue Devtools. Configure it to work with file://
+- [x] Add v-on: Start by simulating in the console what we are going to do
+- [x] Add button to add the new item when clicked
+- [x] Add v-on:keyup.enter to the input element
+- [x] Shorthands for v-on 
+- [x] Use a method `saveItem` to factorice
+- [x] Reset the input when finished the insertion
+- [x] Check the method using the debugger
+- [x] v-if and v-else: add a conditional message when the list is empty
 
 
 ### Next Steps: Add State to your App
 
-- [ X ] Add a `state` variable to the app `data` to represent the states of the app. 
+- [x] Add a `state` variable to the app `data` to represent the states of the app. 
 
   There will be two states: **default** and **edition**. 
   The views on each state will be different
@@ -49,7 +49,7 @@ Follow these steps:
   State **default** corresponds to when the user is the initial state. There will be a button to **add** a new item 
 
 
-- [ X ] Move the `input` and `button` *Save Item* elements to a `div` with class `add-item-form` so that these styles apply
+- [x] Move the `input` and `button` *Save Item* elements to a `div` with class `add-item-form` so that these styles apply
 
   ```css
   .add-item-form, .header {
@@ -71,18 +71,18 @@ Follow these steps:
       margin: .5rem 0;
   }
   ```
-- [ X ] Show the `div` with class `add-item-form` only if the state is `edition`
-- [ X ] To the div with class `header` add a button `Add Item` that will make the app transit from the `default` state to the `edition` state 
-- [ X ] Show the  `add button` only if the state is `default` 
-- [ X ] To the div with class `header` add a button `Cancel Adding Item` with the class `btn-cancel` that will make the app transit from the `edition` state to the `default` state 
-- [ X ] Show the  `Cancel Adding Item` button only if the state is `edition`
-- [ X ] Add the `changeState` method that reflect the transitions between both states 
+- [x] Show the `div` with class `add-item-form` only if the state is `edition`
+- [x] To the div with class `header` add a button `Add Item` that will make the app transit from the `default` state to the `edition` state 
+- [x] Show the  `add button` only if the state is `default` 
+- [x] To the div with class `header` add a button `Cancel Adding Item` with the class `btn-cancel` that will make the app transit from the `edition` state to the `default` state 
+- [x] Show the  `Cancel Adding Item` button only if the state is `edition`
+- [x] Add the `changeState` method that reflect the transitions between both states 
 
 
 ## v-bind steps
 
-- [ X ] Using the dev tools, check that when we click the `save item` with the `input` empty we are adding new empty strings to the `items` list
-- [ X ] Disable the button `save item` when the `input` is empty by binding the `disabled` attribute of the button
+- [x] Using the dev tools, check that when we click the `save item` with the `input` empty we are adding new empty strings to the `items` list
+- [x] Disable the button `save item` when the `input` is empty by binding the `disabled` attribute of the button
 
   The `disabled` attribute is a boolean attribute. A disabled button is unusable and un-clickable.
   
@@ -90,8 +90,8 @@ Follow these steps:
 
 ## Dynamic classes with v-bind
 
-- [ X ] Change the list of items from a list of Strings to a list of Objects with `label` and `purchased` attributes. Update the `saveItem` method and the template accordingly
-- [ X ] Make use of the class `.strikeout` in the css file:
+- [x] Change the list of items from a list of Strings to a list of Objects with `label` and `purchased` attributes. Update the `saveItem` method and the template accordingly
+- [x] Make use of the class `.strikeout` in the css file:
 
   ```css
   .strikeout {
@@ -105,8 +105,8 @@ Follow these steps:
   ```
 
   to style the purchased items. See the [Vue.js Guide section on Class and Style Bindings](https://vuejs.org/v2/guide/class-and-style.html)
-  - [ X ]  Use first the *object syntax* `v-bind:class="{myclass: expression}"` and 
-  - [ X ]  later the *array syntax* `v-bind:class=[exp1, exp2]`
+  - [x]  Use first the *object syntax* `v-bind:class="{myclass: expression}"` and 
+  - [x]  later the *array syntax* `v-bind:class=[exp1, exp2]`
 
 
 ## Topics
